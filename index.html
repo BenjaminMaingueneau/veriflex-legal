@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all">
+  <title>Politique de confidentialité — ProprioInspect</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      max-width: 760px; margin: 0 auto; padding: 32px 20px 64px;
+      line-height: 1.6; color: #1b1f24; background: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e6e8ea; background: #16191c; }
+      a { color: #7db2ff; }
+      table, th, td { border-color: #333 !important; }
+      .note { background: #20262b !important; }
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 4px; }
+    h2 { font-size: 1.15rem; margin-top: 32px; border-bottom: 1px solid #e3e6e9; padding-bottom: 4px; }
+    .meta { color: #6b7480; font-size: .9rem; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .95rem; }
+    th, td { border: 1px solid #dfe3e7; padding: 7px 10px; text-align: left; vertical-align: top; }
+    th { background: #f3f5f7; }
+    .note { background: #f3f5f7; border-radius: 8px; padding: 12px 16px; font-size: .9rem; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Politique de confidentialité</h1>
+  <p class="meta">Application : <strong>ProprioInspect</strong> (nom de travail) · Dernière mise à jour : 2026-06-23</p>
+
+  <p class="note">Ce document est conforme à l'esprit de la <em>Loi 25</em> (Québec) mais
+  n'est pas un avis juridique. Le nom commercial de l'application (« ProprioInspect ») est
+  un nom de travail, susceptible d'évoluer.</p>
+
+  <h2>1. Qui nous sommes</h2>
+  <p>Application éditée par <strong>Benjamin Maingueneau</strong>, domicilié au
+  221 chemin de Wexford, Shannon (Québec) G3S 0Y8, Canada.<br>
+  <strong>Responsable de la protection des renseignements personnels :</strong>
+  Benjamin Maingueneau — <a href="mailto:etatdeslieux.assistance@gmail.com">etatdeslieux.assistance@gmail.com</a>.</p>
+
+  <h2>2. Notre rôle, votre rôle</h2>
+  <p>L'application est un <strong>outil</strong>. <strong>Vous</strong> (propriétaire ou
+  gestionnaire) êtes responsable des renseignements recueillis sur vos locataires et tiers.
+  <strong>Nous</strong> sommes responsables de ce que nous traitons pour le service : votre
+  compte, vos jetons et le scellement (§4).</p>
+
+  <h2>3. Principe : traitement local d'abord</h2>
+  <p>Par défaut, les données de vos états des lieux <strong>restent sur votre appareil</strong>.
+  Nous n'hébergeons aucune base centrale de vos états des lieux.</p>
+
+  <h2>4. Renseignements traités et finalités</h2>
+  <p><strong>Sur votre appareil (sous votre contrôle)</strong></p>
+  <table>
+    <tr><th>Renseignement</th><th>Finalité</th></tr>
+    <tr><td>Noms et courriels du propriétaire et des locataires</td><td>Identifier les parties</td></tr>
+    <tr><td>Photos des logements</td><td>Documenter l'état des lieux</td></tr>
+    <tr><td>Signatures manuscrites</td><td>Attester l'accord des parties</td></tr>
+    <tr><td>Position GPS au moment d'une signature</td><td>Renforcer la valeur probante — captée avec consentement, jamais bloquante ; seule sa présence figure dans le PDF</td></tr>
+    <tr><td>Données d'inspection et journal d'audit</td><td>Produire et sceller le rapport</td></tr>
+  </table>
+  <p><strong>Traité par nos services (scellement et jetons)</strong></p>
+  <table>
+    <tr><th>Renseignement</th><th>Finalité</th><th>Hébergement</th></tr>
+    <tr><td>Identifiant et courriel Google</td><td>Authentification</td><td>Google (régions canadiennes)</td></tr>
+    <tr><td>Solde et historique de jetons</td><td>Achats et débit au scellement</td><td>Firestore, <code>northamerica-northeast1</code> (Montréal)</td></tr>
+    <tr><td>Document PDF transmis au scellement</td><td>Apposer le sceau</td><td><code>northamerica-northeast1</code> — <strong>non conservé</strong></td></tr>
+    <tr><td>Données d'achat</td><td>Paiement</td><td>Google Play Billing</td></tr>
+  </table>
+
+  <h2>5. Permissions de l'appareil</h2>
+  <p><strong>Caméra / photos</strong> : photos de l'état des lieux. <strong>Localisation</strong> :
+  horodatage d'une signature (consentement, jamais bloquant). <strong>Internet</strong> : scellement
+  et jetons.</p>
+
+  <h2>6. Sous-traitants et tiers</h2>
+  <p><strong>Google</strong> (Firebase, Cloud Functions, Firestore, Cloud KMS, Play Billing) —
+  sous-traitant, données en régions canadiennes. <strong>DigiCert</strong> (horodatage RFC 3161,
+  États-Unis) — reçoit uniquement une <strong>empreinte (hash)</strong>, aucun renseignement
+  personnel. Nous ne <strong>vendons pas</strong> vos renseignements personnels.</p>
+
+  <h2>7. Communication hors Québec</h2>
+  <p>Traitement réalisé en priorité dans des centres de données canadiens. La seule communication
+  hors Québec est l'envoi d'une <strong>empreinte non identifiante</strong> à l'autorité
+  d'horodatage (États-Unis).</p>
+
+  <h2>8. Durée de conservation</h2>
+  <p>Sur l'appareil : tant que vous conservez l'état des lieux (suppression et purge offertes).
+  Jetons / compte : tant que le compte existe. Documents au scellement : <strong>non conservés</strong>.</p>
+
+  <h2>9. Vos droits</h2>
+  <p>Accès, rectification, retrait du consentement, suppression, et plainte auprès de la
+  <strong>Commission d'accès à l'information du Québec (CAI)</strong>. Pour exercer un droit,
+  écrivez au responsable (§1). Réponse sous <strong>30 jours</strong>.</p>
+
+  <h2>10. Sécurité</h2>
+  <p>Communications chiffrées en transit, sceau cryptographique des documents, clés de signature
+  protégées par <strong>Cloud KMS</strong> (jamais embarquées). En cas d'incident présentant un
+  risque de préjudice sérieux, nous aviserons les personnes concernées et la CAI.</p>
+
+  <h2>11. Enfants</h2>
+  <p>Application destinée à des professionnels, non aux personnes de moins de 18 ans.</p>
+
+  <h2>12. Modifications</h2>
+  <p>Toute modification importante sera signalée dans l'application et par la date ci-dessus.</p>
+
+  <h2>13. Nous joindre</h2>
+  <p>Benjamin Maingueneau — Responsable de la protection des renseignements personnels —
+  <a href="mailto:etatdeslieux.assistance@gmail.com">etatdeslieux.assistance@gmail.com</a>.</p>
+</body>
+</html>
