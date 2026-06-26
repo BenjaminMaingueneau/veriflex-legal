@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all">
+  <title>Privacy Policy — Veriflex</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      max-width: 760px; margin: 0 auto; padding: 32px 20px 64px;
+      line-height: 1.6; color: #1b1f24; background: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e6e8ea; background: #16191c; }
+      a { color: #7db2ff; }
+      table, th, td { border-color: #333 !important; }
+      .note { background: #20262b !important; }
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 4px; }
+    h2 { font-size: 1.15rem; margin-top: 32px; border-bottom: 1px solid #e3e6e9; padding-bottom: 4px; }
+    .meta { color: #6b7480; font-size: .9rem; }
+    .lang { font-size: .9rem; margin-bottom: 16px; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .95rem; }
+    th, td { border: 1px solid #dfe3e7; padding: 7px 10px; text-align: left; vertical-align: top; }
+    th { background: #f3f5f7; }
+    .note { background: #f3f5f7; border-radius: 8px; padding: 12px 16px; font-size: .9rem; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <p class="lang"><a href="/">Français</a> · <strong>English</strong></p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Application: <strong>Veriflex</strong> (working name) · Last updated: 2026-06-24</p>
+
+  <p class="note">This document follows the spirit of <em>Quebec's Law 25</em> but is
+  not legal advice. The application's commercial name ("Veriflex") is a working
+  name and may change.</p>
+
+  <h2>1. Who we are</h2>
+  <p>Application published by <strong>Benjamin Maingueneau</strong>, residing at
+  221 chemin de Wexford, Shannon (Quebec) G3S 0Y8, Canada.<br>
+  <strong>Officer in charge of the protection of personal information:</strong>
+  Benjamin Maingueneau — <a href="mailto:etatdeslieux.assistance@gmail.com">etatdeslieux.assistance@gmail.com</a>.</p>
+
+  <h2>2. Our role, your role</h2>
+  <p>The application is a <strong>tool</strong>. <strong>You</strong> (landlord or
+  property manager) are responsible for the information collected about your tenants
+  and third parties. <strong>We</strong> are responsible for what we process to
+  operate the service: your account, your tokens and the sealing (§4).</p>
+
+  <h2>3. Principle: local-first processing</h2>
+  <p>By default, your condition-report data <strong>stays on your device</strong>.
+  We do not host any central database of your condition reports.</p>
+
+  <h2>4. Information processed and purposes</h2>
+  <p><strong>On your device (under your control)</strong></p>
+  <table>
+    <tr><th>Information</th><th>Purpose</th></tr>
+    <tr><td>Names and emails of the landlord and tenants</td><td>Identify the parties</td></tr>
+    <tr><td>Photos of the dwellings</td><td>Document the condition report</td></tr>
+    <tr><td>Handwritten signatures</td><td>Attest to the parties' agreement</td></tr>
+    <tr><td>GPS position at the moment of a signature</td><td>Strengthen evidentiary value — captured with consent, never blocking; only its presence appears in the PDF</td></tr>
+    <tr><td>Inspection data and audit log</td><td>Produce and seal the report</td></tr>
+  </table>
+  <p><strong>Processed by our services (sealing and tokens)</strong></p>
+  <table>
+    <tr><th>Information</th><th>Purpose</th><th>Hosting</th></tr>
+    <tr><td>Google identifier and email</td><td>Authentication</td><td>Google (Canadian regions)</td></tr>
+    <tr><td>Token balance and history</td><td>Purchases and debit on sealing</td><td>Firestore, <code>northamerica-northeast1</code> (Montreal)</td></tr>
+    <tr><td>PDF document submitted for sealing</td><td>Apply the seal</td><td><code>northamerica-northeast1</code> — <strong>not retained</strong></td></tr>
+    <tr><td>Purchase data</td><td>Payment</td><td>Google Play Billing</td></tr>
+  </table>
+
+  <h2>5. Device permissions</h2>
+  <p><strong>Camera / photos</strong>: photos of the condition report.
+  <strong>Location</strong>: timestamping a signature (with consent, never blocking).
+  <strong>Internet</strong>: sealing and tokens.</p>
+
+  <h2>6. Processors and third parties</h2>
+  <p><strong>Google</strong> (Firebase, Cloud Functions, Firestore, Cloud KMS, Play Billing) —
+  processor, data in Canadian regions. <strong>DigiCert</strong> (RFC 3161 timestamping,
+  United States) — receives only a <strong>fingerprint (hash)</strong>, no personal
+  information. We do <strong>not sell</strong> your personal information.</p>
+
+  <h2>7. Disclosure outside Quebec</h2>
+  <p>Processing is carried out primarily in Canadian data centres. The only disclosure
+  outside Quebec is the sending of a <strong>non-identifying fingerprint</strong> to the
+  timestamping authority (United States).</p>
+
+  <h2>8. Retention period</h2>
+  <p>On the device: as long as you keep the condition report (deletion and purging offered).
+  Tokens / account: as long as the account exists. Documents submitted for sealing:
+  <strong>not retained</strong>.</p>
+
+  <h2>9. Your rights</h2>
+  <p>Access, correction, withdrawal of consent, deletion, and complaint to the
+  <strong>Commission d'accès à l'information du Québec (CAI)</strong>. To exercise a right,
+  write to the officer (§1). Response within <strong>30 days</strong>.</p>
+
+  <h2>10. Security</h2>
+  <p>Communications encrypted in transit, cryptographic seal of documents, signing keys
+  protected by <strong>Cloud KMS</strong> (never embedded). In the event of an incident
+  presenting a risk of serious harm, we will notify the persons concerned and the CAI.</p>
+
+  <h2>11. Children</h2>
+  <p>Application intended for professionals, not for persons under 18 years of age.</p>
+
+  <h2>12. Changes</h2>
+  <p>Any significant change will be reported in the application and by the date above.</p>
+
+  <h2>13. Contact us</h2>
+  <p>Benjamin Maingueneau — Officer in charge of the protection of personal information —
+  <a href="mailto:etatdeslieux.assistance@gmail.com">etatdeslieux.assistance@gmail.com</a>.</p>
+</body>
+</html>
